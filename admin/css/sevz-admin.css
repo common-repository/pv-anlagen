@@ -1,0 +1,131 @@
+/**
+* All of the CSS for your admin-specific functionality should be
+* included in this file.
+*/
+
+div.smart-input {
+	margin: 1em 0 5em 0;
+	display:flex;
+	flex-direction: row;
+	max-width: 800px;
+	max-height: 40px;
+	font-size: medium;
+}
+div.smart-input label {
+	display: flex;
+	margin-left: 5px;
+	font-size: medium;
+	color: #666;
+	width: 400px;
+	max-height: 40px;
+	font-size: medium;
+}
+div.smart-input select{
+	display:flex;
+	flex-direction: row;
+	margin-left: 10px;
+	max-width: 200px;
+	height: 32px;
+	font-size: medium;
+}
+div.smart-input input {
+	border-color: grey;
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 200px;
+	max-height: 40px;
+	font-size: medium;
+}
+select#smartmeter {
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+
+	max-width: 200px;
+	max-height: 40px;
+	font-size: medium;
+}
+#poweroptiuser {
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+	max-width: 200px;
+	max-height: 1000px;
+	margin-top: -20px;
+	margin-left: -1px;
+	margin-bottom: 2000px;
+	font-size: medium;
+}
+#zaehlernr{
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+	max-width: 200px;
+	max-height: 40px;
+	margin-top: -20px;
+	font-size: medium;
+}
+#zaehler{
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+	max-width: 200px;
+	max-height: 40px;
+	margin-top: -20px;
+	font-size: medium;
+}
+
+.fancy-input {
+	margin: 1em 0 1em 0;
+	position: relative;
+}
+.fancy-input label {
+	position: absolute;
+	top: .5em;
+	left: 5px;
+	font-size: medium;
+	color: #666;
+}
+.fancy-input input {
+	position: absolute;
+	top: .5em;
+	left: 400px;
+}
+#hausnr{
+	position: absolute;
+	top: .5em;
+	left: 600px;
+	max-width: 40px;
+}
+.fancy-input select {
+	position: absolute;
+	top: .5em;
+	left: 400px;
+}
+#footer-thankyou {
+	font-size: 0px;
+}
+#wpfooter p {
+	font-size: 0px;
+}
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 30px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+.button1 {
+	background-color: #4CAF50;
+	font-size: medium;
+}

@@ -1,0 +1,809 @@
+/*loader*/
+div.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+div.hide-loader{
+	display:none;
+}
+
+
+/*Startseite*/
+
+span.imageAnlage img{
+	width: 50px;
+	height: auto;
+	margin-left: 5%;
+	margin-top: -5%;
+}
+span.imageAnlage3 img{
+	width: 50px;
+	height: auto;
+	margin-left: 5%;
+	margin-top: -10%;
+}
+p.row-first{
+	margin-top: 0%;
+	border-top: white 2px solid;
+	border-bottom: white 2px solid;
+	line-height: 3;
+}
+p.row-second{
+	margin-top: 0%;
+}
+p.row-third{
+	border-bottom: white 2px solid;
+}
+p.row-fourth.half{
+	width: 40%;
+
+}
+p.row-fifth.half{
+	margin-right: 0;
+	width: 60%;
+}
+
+div.lastRow{
+	display: flex;
+	flex-direction: row;
+	border-bottom: white 2px solid;
+}
+
+
+/*plant data*/
+div.plant input {
+	text-align: left;
+}
+div.plant_str input {
+	display:flex;
+	flex-direction: row;
+	margin-left: 0px;
+	max-width: 170px;
+	max-height: 40px;
+}
+div.plant_hausnr input {
+	display:flex;
+	flex-direction: row;
+	margin-left: 170px;
+	margin-top: -40px;
+	max-width: 100px;
+	max-height: 40px;
+}
+div.plant_plz input {
+	display:flex;
+	flex-direction: row;
+	margin-left: 0px;
+	max-width: 100px;
+	max-height: 40px;
+}
+div.plant_stadt input {
+	display:flex;
+	flex-direction: row;
+	margin-left: 100px;
+	margin-top: -40px;
+	max-width: 170px;
+	max-height: 40px;
+}
+button.button.buttonPlant {
+	font-size: 14px;
+	margin-left: 750px;
+	margin-top: -30px;
+	margin-bottom: 30px;
+}
+input.button.buttonPlant {
+	display: block;
+	border-color: #666 #666 #666;
+	line-height: normal;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: .1em 0.7em .1em;
+
+}
+label.myLabel input[type="file"] {
+	position:absolute;
+	top: -1000px;
+}
+
+/***** Example custom styling *****/
+.myLabel {
+	border: 1px solid #AAA;
+	border-color: #666 #666 #666;
+	border-radius: 2px;
+	padding: 2px 5px;
+	background: #DDD;
+	display: inline-block;
+}
+.myLabel:hover {
+	background: #CCC;
+}
+.myLabel:active {
+	background: #CCF;
+}
+.myLabel :invalid + span {
+	font-weight: normal;
+
+}
+.myLabel :valid + span {
+	font-weight: normal;
+}
+
+
+
+/* Tabs for Login-View for customers and producers with radio-Buttons */
+
+#leistung{
+	text-align: center;
+}
+#leistungMonth{
+	text-align: center;
+}
+#leistungYear{
+	text-align: center;
+}
+#leistungGesamt{
+	text-align: center;
+}
+
+.tabbedlinks figure { 
+	display: block; 
+	margin: auto; 
+	border-bottom: 1px solid silver;
+	clear: both;
+}
+div.tabbedlinks{
+	max-width: 900px;
+	margin: auto;
+}
+
+.tabbedlinks > input,
+.tabbedlinks figure > div { display: none; }
+.tabbedlinks figure > div {
+	max-width: 900px;
+	border: 1px solid silver;
+	background:#fff;
+	line-height: 1.5em;
+	letter-spacing: 0.3px;
+	color: #444;
+}
+
+#rechnung:checked ~ figure .rechnung,
+#gutschrift:checked ~ figure .gutschrift,
+#bestellung:checked ~ figure .bestellung,
+#vertrag:checked ~ figure .vertrag,
+#prognose:checked ~ figure .prognose,
+#energiebilanz:checked ~ figure .energiebilanz,
+#anlagendaten:checked ~ figure .anlagendaten { display: block; }
+
+nav label {
+	float: left;
+	padding: 15px 15px;
+	border-top: 1px solid silver;
+	border-right: 1px solid silver;	
+	color: #eee;
+}
+
+nav label:nth-child(1) { border-left: 1px solid silver; }
+
+nav label:active { background: #ffffff; }
+#rechnung:checked ~ nav label[for="rechnung"],
+#gutschrift:checked ~ nav label[for="gutschrift"],
+#bestellung:checked ~ nav label[for="bestellung"],
+#vertrag:checked ~ nav label[for="vertrag"],
+#prognose:checked ~ nav label[for="prognose"],
+#energiebilanz:checked ~ nav label[for="energiebilanz"],
+#anlagendaten:checked ~ nav label[for="anlagendaten"]{
+	background: white;
+	color: #111;
+	position: relative;
+	border-bottom: none;
+}
+
+#rechnung:checked ~ nav label[for="rechnung"]:after,
+#gutschrift:checked ~ nav label[for="gutschrift"]:after,
+#bestellung:checked ~ nav label[for="bestellung"]:after,
+#vertrag:checked ~ nav label[for="vertrag"]:after,
+#prognose:checked ~ nav label[for="prognose"]:after,
+#energiebilanz:checked ~ nav label[for="energiebilanz"]:after,
+#anlagendaten:checked ~ nav label[for="anlagendaten"]:after{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: white;
+	left: 0;
+	bottom: -1px;
+}
+
+
+/* style for login_view/producer/energy_balance.php
+* style for login_view/customer/consumption.php
+* Tabs with radio-buttons */
+.tabbed figure { 
+	display: block; 
+	margin-left: 0; 
+	border-bottom: 1px solid silver;
+	clear: both;
+}
+
+.tabbed > input,
+.tabbed figure > div { display: none; }
+
+.tabbed figure > div {
+	padding: 20px;
+	max-width: 700px;
+	border: 1px solid silver;
+	background: #fff;
+	line-height: 1.5em;
+	letter-spacing: 0.3px;
+	color: #444;
+}
+#tab1:checked ~ figure .tab1,
+#tab2:checked ~ figure .tab2,
+#tab3:checked ~ figure .tab3,
+#tab4:checked ~ figure .tab4{ display: block; }
+
+
+#tab1:checked ~ nav label[for="tab1"],
+#tab2:checked ~ nav label[for="tab2"],
+#tab3:checked ~ nav label[for="tab3"],
+#tab4:checked ~ nav label[for="tab4"]{
+	background: white;
+	color: #111;
+	position: relative;
+	border-bottom: none;
+}
+
+#tab1:checked ~ nav label[for="tab1"]:after,
+#tab2:checked ~ nav label[for="tab2"]:after,
+#tab3:checked ~ nav label[for="tab3"]:after,
+#tab4:checked ~ nav label[for="tab4"]:after{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: white;
+	left: 0;
+	bottom: -1px;
+}
+
+
+* {box-sizing: border-box}
+/*body {font-family: Verdana, sans-serif; margin:0}*/
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 8%;
+	width: auto;
+	/*color: hsl(210,50%,50%);*/
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+}
+/* Position "date"*/
+#date {
+	max-width: 50px;
+}
+
+
+/* style for login_view/producer/forecast_producer.php
+* style for login_view/customer/forecast_customer.php
+* Tabs with radio-buttons */
+.tabbed_forecast figure { 
+	display: block; 
+	margin-left: 0; 
+	border-bottom: 1px solid silver;
+	clear: both;
+}
+
+.tabbed_forecast > input,
+.tabbed_forecast figure > div { display: none; }
+
+.tabbed_forecast figure > div {
+	padding: 20px;
+	max-width: 700px;
+	border: 1px solid silver;
+	background: #fff;
+	line-height: 1.5em;
+	letter-spacing: 0.3px;
+	color: #444;
+}
+#forecast1:checked ~ figure .forecast1,
+#forecast2:checked ~ figure .forecast2,
+#forecast3:checked ~ figure .forecast3,
+#forecast4:checked ~ figure .forecast4{ display: block; }
+
+
+#forecast1:checked ~ nav label[for="forecast1"],
+#forecast2:checked ~ nav label[for="forecast2"],
+#forecast3:checked ~ nav label[for="forecast3"],
+#forecast4:checked ~ nav label[for="forecast4"]{
+	background: white;
+	color: #111;
+	position: relative;
+	border-bottom: none;
+}
+
+#forecast1:checked ~ nav label[for="forecast1"]:after,
+#forecast2:checked ~ nav label[for="forecast2"]:after,
+#forecast3:checked ~ nav label[for="forecast3"]:after,
+#forecast4:checked ~ nav label[for="forecast4"]:after{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: white;
+	left: 0;
+	bottom: -1px;
+}
+
+/* style for login_view/producer/orders_producer.php
+* Tabs with radio-buttons */
+.orders figure { 
+	display: block; 
+	margin-left: 0; 
+	border-bottom: 1px solid silver;
+	clear: both;
+}
+
+.orders > input,
+.orders figure > div { display: none; }
+
+.orders figure > div {
+	padding: 20px;
+	max-width: 700px;
+	border: 1px solid silver;
+	background: #fff;
+	line-height: 1.5em;
+	letter-spacing: 0.3px;
+	color: #444;
+}
+#consumption:checked ~ figure .consumption,
+#feedin:checked ~ figure .feedin,
+#invoice:checked ~ figure .invoice,
+#credit:checked ~ figure .credit{ display: block; }
+
+#consumption:checked ~ nav label[for="consumption"],
+#feedin:checked ~ nav label[for="feedin"],
+#invoice:checked ~ nav label[for="invoice"],
+#credit:checked ~ nav label[for="credit"]{
+	background: white;
+	color: #111;
+	position: relative;
+	border-bottom: none;
+}
+
+#consumption:checked ~ nav label[for="consumption"]:after,
+#feedin:checked ~ nav label[for="feedin"]:after,
+#invoice:checked ~ nav label[for="invoice"]:after,
+#credit:checked ~ nav label[for="credit"]:after{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background: white;
+	left: 0;
+	bottom: -1px;
+}
+
+/* style for login_view/producer/orders_producer.php
+* view months consumption*/
+div.month {
+	max-width: 700px;
+	margin: auto;
+	margin-top: 0.5%;
+}
+details {
+	grid-column: 2 / 3;
+	height: min-content;
+	transition: all .5s;
+}
+summary:hover {
+	background-color: rgb(230, 230, 230);
+}
+
+summary {
+	position: relative;
+	line-height: 300%;
+	padding-left: 1em;
+}
+summary::marker {
+	color: transparent;
+}
+
+summary::after {
+	width: 1rem;
+	height: 1em;
+	position: absolute;
+	top: 0;
+	right: 1em;
+	content: '+';
+	font-size: 2em;
+	font-weight: bold;
+	text-align: right;
+	transition: transform .2s;
+}
+
+details[open] summary::after {
+	transform: translate(5px, 0) rotate(45deg);
+	color: #E3A417;
+}
+
+details[open] summary {
+	background: rgb(255, 235, 230);
+}
+
+details p {
+	padding: .5em;
+}
+[type="checkbox"] {
+	position: relative;
+	left: 15px;
+	top: -4px;
+	z-index: 0;
+	-webkit-appearance: none;
+}
+[type="checkbox"] + label {
+	position: absolute;
+}
+[type="checkbox"] + label::before {
+	width: 15px;
+	height: 15px;
+	border-radius: 5px;
+	border: 2px solid #8cad2d;
+	background-color: #fff;
+	display: block;
+	content: "";
+	float: left;
+	margin-right: 5px;
+	z-index: 5;
+	position: relative;
+}
+[type="checkbox"]:checked+label::before {
+	box-shadow: inset 0px 0px 0px 3px #fff;
+	background-color: #8cad2d;
+}
+
+/*Style for invoice*/
+div.invoice-input {
+	margin: 1em 0 1em 0;
+	position: relative;
+}
+div.invoice-input label {
+	position: absolute;
+	top: .5em;
+	left: 5px;
+	font-size: medium;
+	color: #666;
+}
+.invoice-input input {
+	position: absolute;
+	top: .5em;
+	left: 200px;
+	max-width: 200px;
+}
+div.invoice-input select {
+	position: absolute;
+	top: .5em;
+	left: 20px;
+}
+
+
+
+/* start-page*/
+a.consumption{
+	color: red;
+}
+
+/*anmeldeassistent*/
+span.error {color: #FF0000;}
+div.fancy-input {
+	margin: 1em 0 0em 0;
+	display:flex;
+	flex-direction: row;
+	max-width: 800px;
+	max-height: 40px;
+}
+div.fancy-input label {
+	display: flex;
+	margin-left: 5px;
+	font-size: medium;
+	color: #666;
+	width: 400px;
+	max-height: 40px;
+}
+div.verbrauchsstelle label {
+	display:flex;
+	margin-left: 5px;
+	font-size: medium;
+	color: #666;
+	width: 400px;
+	max-height: 40px;
+	/*margin: 1em 0 2em 0;*/
+}
+div.nettonennleistung {
+	margin-top: 5em;
+}
+div.fancy-input input {
+	border-color: grey;
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 200px;
+	max-height: 40px;
+}
+#strasse_pv{
+	/*margin: -1em 0 1em 0;*/
+	display:flex;
+	flex-direction: row;
+	max-width: 200px;
+}
+#hausnr_pv{
+	/*margin: -1em 0 1em 0;*/
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 80px;
+}
+#PLZ_pv{
+	display:flex;
+	flex-direction: row;
+	/*margin: -1em 0 1em 0;*/
+	max-width: 90px;
+}
+#stadt_pv{
+	display:flex;
+	flex-direction: row;
+	/*margin: -1em 0 1em 0;
+	top: .10em;*/
+	margin-left: 10px;
+	max-width: 190px;
+}
+#strasse_verbrauch{
+	display:flex;
+	flex-direction: row;
+	/*margin: -1em 0 1em 0;*/
+	max-width: 200px;
+}
+#hausnr_verbrauch{
+	/*margin: -1em 0 1em 0;*/
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 80px;
+}
+#PLZ_verbrauch{
+	display:flex;
+	flex-direction: row;
+	/*margin: -1em 0 1em 0;*/
+	max-width: 90px;
+}
+#stadt_verbrauch{
+	/*margin: -1em 0 1em 0;*/
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 190px;
+}
+
+
+div.smart-input {
+	margin: 1em 0 5em 0;
+	display:flex;
+	flex-direction: row;
+	max-width: 800px;
+	max-height: 40px;
+}
+div.smart-input label {
+	display: flex;
+	margin-left: 5px;
+	font-size: medium;
+	color: #666;
+	width: 400px;
+	max-height: 40px;
+}
+div.smart-input select{
+	display:flex;
+	flex-direction: row;
+	margin-left: 10px;
+	max-width: 200px;
+	height: 32px;
+}
+div.smart-input input {
+	border-color: grey;
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 200px;
+	max-height: 40px;
+}
+select#smartmeter {
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+
+	max-width: 200px;
+	max-height: 40px;
+}
+#poweroptiuser {
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+	max-width: 200px;
+	max-height: 1000px;
+	margin-top: -20px;
+	margin-left: -1px;
+	margin-bottom: 2000px;
+}
+#zaehlernr{
+	border-color: grey;
+	display: flex;
+	flex-direction: column;
+	/* top: .10em; */
+	max-width: 200px;
+	max-height: 40px;
+	margin-top: -20px;
+}
+
+div.fancy-input select {
+	border-color: grey;
+	display:flex;
+	flex-direction: row;
+	/*top: .10em;*/
+	margin-left: 10px;
+	max-width: 200px;
+	max-height: 40px;
+}		
+button.button.button_back {
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+button.button.button_abbrechen {
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+button.button.button_for {
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+	font-size: medium;
+}
+
+/*contract*/
+#select_arbeitspreis {
+	display:flex;
+	margin: left;
+	color: #666;
+	max-width: 450px;
+}
+#nt{
+	display:flex;
+	margin-bottom: auto;
+	flex-direction: row;
+	border-color: grey;
+	margin-left: 10px;
+	max-width: 100px;		
+}
+#grundpreis{
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+div.contract-input {
+
+	display: flex;
+	max-height: 40px;
+}
+div.contract-input label {
+	display:flex;
+	width: 280px;
+	margin-left: 5px;
+	font-size: small;
+	color: #666;
+}
+div.contract-input input {
+	display:flex;
+	flex-direction: row;
+	border-color: grey;
+	margin-left: 10px;
+	max-width: 100px;
+	max-height: 40px;
+}
+
+div.contract-input-calendar label {
+	display:flex;
+	width: 280px;
+	margin-left: 5px;
+	font-size: small;
+	color: #666;
+}
+div.contract-input-calendar input {
+	display:flex;
+	flex-direction: row;
+	border-color: grey;
+	margin-left: 295px;
+	max-width: 200px;
+	max-height: 40px;
+	margin-top: -25px;
+}
+
+div.contract-input select {
+	display:flex;
+	flex-direction: row;
+	border-color: grey;
+	margin-left: 10px;
+	max-width: 100px;
+	max-height: 40px;
+}
+button.button.buttonSpeichern {
+	font-size: 14px;
+}
+input.button.buttonSpeichern {
+	display: block;
+	border-color: #666 #666 #666;
+	line-height: normal;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: .1em 0.7em .1em;
+}
